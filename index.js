@@ -9,15 +9,6 @@
 
 /*
 Adds a catchIf method to Promise.
-Usage 
-## Step1
-Monkeypatch your Promise class
-require('catch-if')(Promise);
-
-## Step 2. Use catchIf method
-Promise.reject( new TypeError() )
-.catchIf( TypeError, function handler(err){ console.log('TypeError handled')} )
-.catchIf( RangeError, function handler(err){ console.log('RangeError handled')} )
 */
 function addCatchIf ( promiseClass ){
   promiseClass.prototype.catchIf = function(){
